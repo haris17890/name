@@ -53,27 +53,14 @@ else
 	Orion.Parent = game.CoreGui
 end
 
-if gethui then
-	for _, Interface in ipairs(gethui():GetChildren()) do
-		if Interface.Name == Orion.Name and Interface ~= Orion then
-			Interface:Destroy()
-		end
-	end
-else
 	for _, Interface in ipairs(game.CoreGui:GetChildren()) do
 		if Interface.Name == Orion.Name and Interface ~= Orion then
 			Interface:Destroy()
 		end
 	end
-end
 
 function OrionLib:IsRunning()
-	if gethui then
-		return Orion.Parent == gethui()
-	else
 		return Orion.Parent == game:GetService("CoreGui")
-	end
-
 end
 
 local function AddConnection(Signal, Function)
