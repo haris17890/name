@@ -1,0 +1,1 @@
+game:GetService("Players").LocalPlayer:Kick("Join Discord:https://discord.gg/A5nka9Q8")
